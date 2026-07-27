@@ -805,6 +805,10 @@ nav ul li a:hover {
     background: var(--cor-branco);
 }
 
+.sobre-conteudo {
+    min-width: 0;
+}
+
 .sobre-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -823,7 +827,7 @@ nav ul li a:hover {
     position: absolute;
     top: -20px;
     left: -20px;
-    width: 100%;
+    width: auto;
     background: var(--cor-dourado-translucido);
     border-radius: 24px;
     z-index: 1;
@@ -900,6 +904,7 @@ nav ul li a:hover {
 
 .sobre-estatisticas {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 32px;
     margin: 32px 0 24px;
@@ -1493,6 +1498,11 @@ nav ul li a:hover {
     .sobre-selo {
         width: 90px;
         height: 90px;
+    }
+
+    .sobre-estatisticas {
+        gap: 12px;
+        row-gap: 16px;
     }
 
     .sobre-estatistica-numero {
