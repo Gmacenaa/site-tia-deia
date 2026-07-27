@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* VARIÁVEIS */
@@ -1448,6 +1454,11 @@ nav ul li a:hover {
     .produtos-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .produtos-titulo {
