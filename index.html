@@ -93,7 +93,7 @@
                 <div class="produtos-cabecalho">
                     <span class="tag">Nossos Sabores</span>
 
-                    <h2 class="produtos-titulo">Brigadeiros Artezanais</h2>
+                    <h2 class="produtos-titulo">Brigadeiros Artesanais</h2>
 
                     <div class="divisor">
                         <span class="divisor-linha"></span>
@@ -112,6 +112,7 @@
                     <div class="produto-card">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-tradicional.png" alt="Tradicional">
+                            <span class="tipo-badge tipo-tradicional">Tradicional</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Tradicional</h3>
@@ -119,9 +120,87 @@
                                 A receita original com chocolate ao leite cacau e granulado crocante artesanal.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 6,50</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 1,70</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Tradicional">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Tradicional">
+                                    <button class="btn-aumentar-card" data-produto="Tradicional">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Tradicional"
-                                    data-preco="6.50">Comprar</a>
+                                    data-preco="1.70">Adicionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="imagens/Brigadeiro-ninho.png" alt="Ninho">
+                            <span class="tipo-badge tipo-tradicional">Tradicional</span>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-titulo">Ninho</h3>
+                            <p class="produto-descricao">
+                                Cremoso brigadeiro de leite Ninho, com sabor suave e aveludado que derrete na boca.
+                            </p>
+                            <div class="produto-rodape">
+                                <span class="produto-preco"><span class="cifrao">R$</span> 1,70</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Ninho">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Ninho">
+                                    <button class="btn-aumentar-card" data-produto="Ninho">+</button>
+                                </div>
+                                <a href="#pedido" class="botao-comprar" data-produto="Ninho"
+                                    data-preco="1.70">Adicionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="imagens/Brigadeiro-bicho-de-pe.png" alt="Bicho de Pé">
+                            <span class="tipo-badge tipo-tradicional">Tradicional</span>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-titulo">Bicho de Pé</h3>
+                            <p class="produto-descricao">
+                                Brigadeiro de morango coberto com granulado colorido, doce e frutado em cada mordida.
+                            </p>
+                            <div class="produto-rodape">
+                                <span class="produto-preco"><span class="cifrao">R$</span> 1,70</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Bicho de Pé">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Bicho de Pé">
+                                    <button class="btn-aumentar-card" data-produto="Bicho de Pé">+</button>
+                                </div>
+                                <a href="#pedido" class="botao-comprar" data-produto="Bicho de Pé"
+                                    data-preco="1.70">Adicionar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-imagem">
+                            <img src="imagens/Brigadeiro-beijinho.png" alt="Beijinho">
+                            <span class="tipo-badge tipo-tradicional">Tradicional</span>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-titulo">Beijinho</h3>
+                            <p class="produto-descricao">
+                                O clássico docinho de coco, cremoso e branquinho, queridinho de todas as festas.
+                            </p>
+                            <div class="produto-rodape">
+                                <span class="produto-preco"><span class="cifrao">R$</span> 1,70</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Beijinho">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Beijinho">
+                                    <button class="btn-aumentar-card" data-produto="Beijinho">+</button>
+                                </div>
+                                <a href="#pedido" class="botao-comprar" data-produto="Beijinho"
+                                    data-preco="1.70">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -129,6 +208,7 @@
                     <div class="produto-card">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-mm.png" alt="MM">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">MM</h3>
@@ -136,8 +216,14 @@
                                 A base clássica de brigadeiro coberta por um mosaico vibrante de M&M's crocantes.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 7,50</span>
-                                <a href="#pedido" class="botao-comprar" data-produto="MM" data-preco="7.50">Comprar</a>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="MM">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0" data-produto="MM">
+                                    <button class="btn-aumentar-card" data-produto="MM">+</button>
+                                </div>
+                                <a href="#pedido" class="botao-comprar" data-produto="MM"
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -146,6 +232,7 @@
                         <div class="produto-imagem">
                             <img src="imagens/Brrigadeiro-ninho-nutella.png" alt="Ninho com Nutella">
                             <span class="produto-badge">Mais Vendido</span>
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Ninho com Nutella</h3>
@@ -153,43 +240,15 @@
                                 A suave massa de leite Ninho envolta em uma flor de Nutella cremosa.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Ninho com Nutella">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Ninho com Nutella">
+                                    <button class="btn-aumentar-card" data-produto="Ninho com Nutella">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Ninho com Nutella"
-                                    data-preco="9.00">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-imagem">
-                            <img src="imagens/Brigadeiro-ninho.png" alt="Ninho">
-                        </div>
-                        <div class="produto-info">
-                            <h3 class="produto-titulo">Ninho</h3>
-                            <p class="produto-descricao">
-                                Cremoso brigadeiro de leite Ninho, com sabor suave e aveludado que derrete na boca.
-                            </p>
-                            <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 6,50</span>
-                                <a href="#pedido" class="botao-comprar" data-produto="Ninho"
-                                    data-preco="6.50">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-imagem">
-                            <img src="imagens/Brigadeiro-bicho-de-pe.png" alt="Bicho de Pé">
-                        </div>
-                        <div class="produto-info">
-                            <h3 class="produto-titulo">Bicho de Pé</h3>
-                            <p class="produto-descricao">
-                                Brigadeiro de morango coberto com granulado colorido, doce e frutado em cada mordida.
-                            </p>
-                            <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 6,50</span>
-                                <a href="#pedido" class="botao-comprar" data-produto="Bicho de Pé"
-                                    data-preco="6.50">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -197,6 +256,7 @@
                     <div class="produto-card">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-prestigio.png" alt="Prestígio">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Prestígio</h3>
@@ -204,9 +264,15 @@
                                 Brigadeiro coberto com coco ralado, a combinação clássica de chocolate e coco.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Prestígio">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Prestígio">
+                                    <button class="btn-aumentar-card" data-produto="Prestígio">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Prestígio"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -214,6 +280,7 @@
                     <div class="produto-card">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-pacoca.png" alt="Paçoca">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Paçoca</h3>
@@ -221,16 +288,23 @@
                                 O sabor tradicional de amendoim torrado em formato de brigadeiro, docinho o ano todo.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Paçoca">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Paçoca">
+                                    <button class="btn-aumentar-card" data-produto="Paçoca">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Paçoca"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="produto-card">
+                    <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-maracuja.png" alt="Maracujá">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Maracujá</h3>
@@ -239,9 +313,15 @@
                                 fruta.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Maracujá">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Maracujá">
+                                    <button class="btn-aumentar-card" data-produto="Maracujá">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Maracujá"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -249,6 +329,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-coffe-milk.png" alt="Coffe Milk">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Coffe Milk</h3>
@@ -256,9 +337,15 @@
                                 Brigadeiro cremoso com café e leite, equilibrando doçura e um toque encorpado.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Coffe Milk">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Coffe Milk">
+                                    <button class="btn-aumentar-card" data-produto="Coffe Milk">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Coffe Milk"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -266,6 +353,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-ouro-branco.png" alt="Ouro Branco">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Ouro Branco</h3>
@@ -273,9 +361,15 @@
                                 Brigadeiro branco crocante com pedaços de Ouro Branco, doce e crocante ao mesmo tempo.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Ouro Branco">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Ouro Branco">
+                                    <button class="btn-aumentar-card" data-produto="Ouro Branco">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Ouro Branco"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -283,6 +377,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-stikadinho.png" alt="Stikadinho">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Stikadinho</h3>
@@ -290,9 +385,15 @@
                                 Brigadeiro recheado com brigadeiro de morango, uma surpresa gostosa a cada mordida.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Stikadinho">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Stikadinho">
+                                    <button class="btn-aumentar-card" data-produto="Stikadinho">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Stikadinho"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -300,6 +401,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-churros.png" alt="Churros">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Churros</h3>
@@ -307,9 +409,15 @@
                                 Brigadeiro com toque de canela e açúcar, inspirado no doce clássico dos churros.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Churros">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Churros">
+                                    <button class="btn-aumentar-card" data-produto="Churros">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Churros"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -317,6 +425,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-choco-ball.png" alt="ChocoBall">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">ChocoBall</h3>
@@ -324,9 +433,15 @@
                                 Combinação de brigadeiro de leite Ninho com brigadeiro tradicional de chocolate.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="ChocoBall">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="ChocoBall">
+                                    <button class="btn-aumentar-card" data-produto="ChocoBall">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="ChocoBall"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -334,6 +449,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-branco.png" alt="Brigadeiro Branco">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Brigadeiro Branco</h3>
@@ -341,9 +457,15 @@
                                 Brigadeiro cremoso de chocolate branco, doce e suave do primeiro ao último bocado.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Brigadeiro Branco">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0"
+                                        data-produto="Brigadeiro Branco">
+                                    <button class="btn-aumentar-card" data-produto="Brigadeiro Branco">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Brigadeiro Branco"
-                                    data-preco="9.00">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -351,6 +473,7 @@
                     <div class="produto-card produto-extra escondido">
                         <div class="produto-imagem">
                             <img src="imagens/Brigadeiro-cafe.png" alt="Café">
+                            <span class="tipo-badge tipo-especial">Especial</span>
                         </div>
                         <div class="produto-info">
                             <h3 class="produto-titulo">Café</h3>
@@ -358,26 +481,14 @@
                                 Brigadeiro com toque de café, encorpado e aromático, perfeito para quem ama um agridoce.
                             </p>
                             <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 9,00</span>
+                                <span class="produto-preco"><span class="cifrao">R$</span> 2,00</span>
+                                <div class="seletor-quantidade">
+                                    <button class="btn-diminuir-card" data-produto="Café">−</button>
+                                    <input type="number" class="input-quantidade" value="0" min="0" data-produto="Café">
+                                    <button class="btn-aumentar-card" data-produto="Café">+</button>
+                                </div>
                                 <a href="#pedido" class="botao-comprar" data-produto="Café"
-                                    data-preco="9.00">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="produto-card produto-extra escondido">
-                        <div class="produto-imagem">
-                            <img src="imagens/Brigadeiro-beijinho.png" alt="Beijinho">
-                        </div>
-                        <div class="produto-info">
-                            <h3 class="produto-titulo">Beijinho</h3>
-                            <p class="produto-descricao">
-                                O clássico docinho de coco, cremoso e branquinho, queridinho de todas as festas.
-                            </p>
-                            <div class="produto-rodape">
-                                <span class="produto-preco"><span class="cifrao">R$</span> 6,50</span>
-                                <a href="#pedido" class="botao-comprar" data-produto="Beijinho"
-                                    data-preco="6.50">Comprar</a>
+                                    data-preco="2.00">Adicionar</a>
                             </div>
                         </div>
                     </div>
@@ -530,7 +641,7 @@
                     </p>
 
                     <a class="botao-seu-pedido"
-                        href="https://wa.me/5518996560697?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido">Falar
+                        href="https://wa.me/5518997535970?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido">Falar
                         pelo WhatsApp</a>
                 </div>
             </div>
@@ -558,7 +669,7 @@
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/tiadeiabrigaderia" target="_blank" rel="noopener noreferrer"
                         class="footer-social-icone">IG</a>
-                    <a href="https://wa.me/5518996560697" class="footer-social-icone">WA</a>
+                    <a href="https://wa.me/5518997535970" class="footer-social-icone">WA</a>
                 </div>
             </div>
 
@@ -609,6 +720,7 @@
             <a href="#" id="btn-finalizar-pedido" target="_blank">
                 Finaliza pelo WhatsApp
             </a>
+            <p id="aviso-minimo" class="aviso-minimo"></p>
         </div>
     </aside>
 

@@ -68,13 +68,13 @@ if (botaoCarrinho) botaoCarrinho.addEventListener('click', abrirCarrinho);
 if (fecharCarrinhoBtn) fecharCarrinhoBtn.addEventListener('click', fecharPanielCarrinho);
 if (overlayCarrinho) overlayCarrinho.addEventListener('click', fecharPanielCarrinho);
 
-function adicionarAoCarrinho(nome, preco) {
+function adicionarAoCarrinho(nome, preco, quantidade) {
     const itemExistente = carrinho.find(item => item.nome === nome);
 
     if (itemExistente) {
-        itemExistente.quantidade++;
+        itemExistente.quantidade += quantidade;
     } else {
-        carrinho.push({ nome, preco, quantidade: 1 });
+        carrinho.push({ nome, preco, quantidade: quantidade });
     }
 
     renderizarCarrinho();
@@ -109,6 +109,23 @@ function renderizarCarrinho() {
     });
 
     contadorCarrinho.textContent = totalItens;
+
+    const MINIMO_POR_SABOR = 25;
+    const avisoMinimo = document.getElementById('aviso-minimo');
+
+const itemAbaixoDoMinimo = carrinho.find(item => item.quantidade < MINIMO_POR_SABOR);
+
+if (carrinho.length === 0 || itemAbaixoDoMinimo) {
+    avisoMinimo.textContent = `Cada sabor precisa ter o minimo ${MINIMO_POR_SABOR} unidades`;
+    avisoMinimo.style.display = 'block';
+    btnFinalizarPedido.classList.add('desabilitado');
+    btnFinalizarPedido.style.pointerEvents = 'none';
+} else {
+    avisoMinimo.style.display = 'none';
+    btnFinalizarPedido.classList.remove('desabilitado');
+    btnFinalizarPedido.classList.pointerEvents = 'auto';
+}
+
     totalCarrinho.textContent = `R$ ${totalPreco.toFixed(2)}`;
 
     let mensagem = "Olá Gostaria de Fazer o seguinte pedido: \n\n";
@@ -121,7 +138,7 @@ function renderizarCarrinho() {
 
     const mensagemCodificada = encodeURIComponent(mensagem);
 
-    const numeroWhatsApp = "5518996560697";
+    const numeroWhatsApp = "5518997535970";
     btnFinalizarPedido.href = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 }
 
@@ -156,6 +173,27 @@ botoesComprar.forEach(botao => {
     botao.addEventListener('click', (e) => {
         const nomeProduto = botao.dataset.produto;
         const precoProduto = Number(botao.dataset.preco);
-        adicionarAoCarrinho(nomeProduto, precoProduto);
+        const input = document.querySelector(`.input-quantidade[data-produto="${nomeProduto}"]`);
+        const quantidade = Number(input.value);
+
+        if (quantidade <=0) return;
+
+        adicionarAoCarrinho(nomeProduto, precoProduto, quantidade);
+        input.value = 0;
+    });
+});
+
+document.querySelectorAll('.btn-aumentar-card').forEach(botao => {
+    botao.addEventListener('click', () => {
+        const input = document.querySelector(`.input-quantidade[data-produto="${botao.dataset.produto}"]`);
+        input.value = Number(input.value) + 1;
+    });
+});
+
+document.querySelectorAll('.btn-diminuir-card').forEach(botao => {
+    botao.addEventListener('click', () => {
+      const input = document.querySelector(`.input-quantidade[data-produto="${botao.dataset.produto}"]`);
+      const novoValor = Number(input.value) - 1;
+      input.value = novoValor < 0 ? 0 : novoValor;
     });
 });
